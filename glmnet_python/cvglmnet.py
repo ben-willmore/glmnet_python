@@ -267,7 +267,7 @@ def cvglmnet(*, x,
         foldid = population[mc]
         foldid = scipy.reshape(foldid, [foldid.size,])
     else:
-        nfolds = scipy.amax(foldid) + 1
+        nfolds = int(scipy.amax(foldid) + 1)
         
     if nfolds < 3:
         raise ValueError('nfolds must be bigger than 3; nfolds = 10 recommended')        

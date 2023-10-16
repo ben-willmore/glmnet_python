@@ -32,7 +32,7 @@ def cvelnet(fit, \
         y = y - offset
 
     predmat = scipy.ones([y.size, lambdau.size])*scipy.NAN               
-    nfolds = scipy.amax(foldid) + 1
+    nfolds = int(scipy.amax(foldid) + 1)
     nlams = [] 
     for i in range(nfolds):
         which = foldid == i
